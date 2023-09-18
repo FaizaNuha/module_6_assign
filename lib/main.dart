@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(children: [
             Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(6.0),
                 child: Container(
                     width: 70,
                     height: 30,
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ]))),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(2.0),
               child: TextField(
                 decoration: InputDecoration(
                     hintText: 'Search for photos...',
@@ -69,12 +69,12 @@ class HomeScreen extends StatelessWidget {
             Scrollbar(
               child: Container(
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height,
+                  height: 300,
                   child: GridView(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      crossAxisSpacing: 8.0,
-                      mainAxisSpacing: 8.0,
+                      crossAxisSpacing: 1.0,
+                      mainAxisSpacing: 1.0,
                     ),
                     children: [
                      Column(
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                 },
                          child: Image.network(
                             'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 200,
+                            width: 120,
                           ),),
 
                           Text('Photo 0',style: TextStyle(
@@ -108,9 +108,9 @@ class HomeScreen extends StatelessWidget {
                             },
                          child: Image.network(
                             'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 200,
+                            width: 120,
                           )),
-                          Text('3rd',style: TextStyle(
+                          Text('Photo 1',style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold
                           ),)
@@ -122,14 +122,33 @@ class HomeScreen extends StatelessWidget {
                             onTap: () {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(
-                                content: Text("6th Pic"),
+                                content: Text("3rd Pic"),
                               ));
                             },
                           child: Image.network(
                             'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 200
+                            width: 120
                           ),),
-                          Text('4th pic',style: TextStyle(
+                          Text('Photo 2',style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold
+                          ),)
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(
+                                content: Text("4th Pic"),
+                              ));
+                            },
+                          child: Image.network(
+                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                            width: 120,
+                          ),),
+                          Text('Photo 3',style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold
                           ),)
@@ -146,27 +165,7 @@ class HomeScreen extends StatelessWidget {
                             },
                           child: Image.network(
                             'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 200,
-                          ),),
-                          Text(' 6th pic',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                content: Text("6th Pic"),
-                              ));
-                            },
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 200,
+                            width: 120,
                           ),),
                           Text('Photo 4',style: TextStyle(
                               fontSize: 18,
@@ -180,12 +179,12 @@ class HomeScreen extends StatelessWidget {
                             onTap: () {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(
-                                content: Text("6th Pic"),
+                                content: Text("5th Pic"),
                               ));
                             },
                           child: Image.network(
                             'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 200,
+                            width: 120,
                           ),),
                           Text('Photo 5',style: TextStyle(
                               fontSize: 18,
