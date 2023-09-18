@@ -66,138 +66,140 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            Scrollbar(
-              child: Container(
-                child: SizedBox(
-                  height: 300,
-                  child: GridView(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 1.0,
-                      mainAxisSpacing: 1.0,
+            Center(
+              child: Scrollbar(
+                child: Container(
+                  child: SizedBox(
+                    height: 300,
+                    child: GridView(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        crossAxisSpacing: 1.0,
+                        mainAxisSpacing: 1.0,
+                      ),
+                      children: [
+                       Column(
+                          children: [
+                    GestureDetector(
+                    onTap: () {
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(SnackBar(
+                  content: Text("1st Pic"),
+                  ));
+                  },
+                           child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                              width: 120,
+                            ),),
+
+                            Text('Photo 0',style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold
+                            ),)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("2nd Pic"),
+                                ));
+                              },
+                           child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                              width: 120,
+                            )),
+                            Text('Photo 1',style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            ),)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("3rd Pic"),
+                                ));
+                              },
+                            child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                              width: 120
+                            ),),
+                            Text('Photo 2',style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            ),)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("4th Pic"),
+                                ));
+                              },
+                            child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                              width: 120,
+                            ),),
+                            Text('Photo 3',style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            ),)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("5th Pic"),
+                                ));
+                              },
+                            child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                              width: 120,
+                            ),),
+                            Text('Photo 4',style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            ),)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                  content: Text("5th Pic"),
+                                ));
+                              },
+                            child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
+                              width: 120,
+                            ),),
+                            Text('Photo 5',style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            ),)
+                          ],
+                        ),
+                      ],
                     ),
-                    children: [
-                     Column(
-                        children: [
-                  GestureDetector(
-                  onTap: () {
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(
-                content: Text("1st Pic"),
-                ));
-                },
-                         child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 120,
-                          ),),
 
-                          Text('Photo 0',style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                content: Text("2nd Pic"),
-                              ));
-                            },
-                         child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 120,
-                          )),
-                          Text('Photo 1',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                content: Text("3rd Pic"),
-                              ));
-                            },
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 120
-                          ),),
-                          Text('Photo 2',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                content: Text("4th Pic"),
-                              ));
-                            },
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 120,
-                          ),),
-                          Text('Photo 3',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                content: Text("5th Pic"),
-                              ));
-                            },
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 120,
-                          ),),
-                          Text('Photo 4',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                content: Text("5th Pic"),
-                              ));
-                            },
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg',
-                            width: 120,
-                          ),),
-                          Text('Photo 5',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),)
-                        ],
-                      ),
-                    ],
                   ),
-
                 ),
-              ),
 
+              ),
             ),
             Column(
               children: [
